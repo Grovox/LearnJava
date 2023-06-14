@@ -11,7 +11,7 @@ import java.util.Stack;
 import static Graph.Generation.addOrGetNode;
 
 public class DeepTraversalWithStack {
-    static void DNF(Node node, HashSet<Node> passed){
+    static void DFS(Node node, HashSet<Node> passed){
         System.out.println(node.value);
 
         Stack<Node> stack = new Stack<>();
@@ -39,11 +39,11 @@ public class DeepTraversalWithStack {
 
     static void DFSWrap(HashMap<Integer,Node> graph, int top){
         HashSet<Node> passed = new HashSet<>();
-        DNF(graph.get(top),passed);
+        DFS(graph.get(top),passed);
         for (Map.Entry<Integer,Node> graphEntry : graph.entrySet()){
             Node node = graphEntry.getValue();
             if(!passed.contains(node)){
-                DNF(node,passed);
+                DFS(node,passed);
             }
         }
     }

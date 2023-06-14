@@ -6,28 +6,27 @@ import Graph.Structure.Node;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-
 import static Graph.Generation.addOrGetNode;
 
 public class DeepTraversalWithRecursion {
-    static void DNF(Node node, HashSet<Node> passed){
+    static void DFS(Node node, HashSet<Node> passed){
         System.out.println(node.value);
 
         passed.add(node);
         for (Edge edge : node.edges){
             if (!passed.contains(edge.adjacentNode)){
-                DNF(edge.adjacentNode,passed);
+                DFS(edge.adjacentNode,passed);
             }
         }
     }
 
     static void DFSWrap(HashMap<Integer,Node> graph, int top){
         HashSet<Node> passed = new HashSet<>();
-        DNF(graph.get(top),passed);
+        DFS(graph.get(top),passed);
         for (Map.Entry<Integer,Node> graphEntry : graph.entrySet()){
             Node node = graphEntry.getValue();
             if(!passed.contains(node)){
-                DNF(node,passed);
+                DFS(node,passed);
             }
         }
     }
