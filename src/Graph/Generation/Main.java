@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
-    static Node addOrGetNode(HashMap<Integer, Node> graph, int value){
+    public static Node addOrGetNode(HashMap<Integer, Node> graph, int value){
         if(value == -1) return null;
         if(graph.containsKey(value)) return graph.get(value);
         Node node = new Node(value);
