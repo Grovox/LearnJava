@@ -1,8 +1,8 @@
 package Graph.Structure;
 
 public class Edge {
-    Node adjacentNode;
-    int weight;
+    public Node adjacentNode;
+    public int weight;
 
     public Edge(Node adjacentNode, int weight) {
         this.adjacentNode = adjacentNode;
