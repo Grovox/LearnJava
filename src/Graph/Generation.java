@@ -1,4 +1,4 @@
-package Graph.Generation;
+package Graph;
 
 import Graph.Structure.Edge;
 import Graph.Structure.Node;
@@ -6,7 +6,7 @@ import Graph.Structure.Node;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Main {
+public class Generation {
     public static Node addOrGetNode(HashMap<Integer, Node> graph, int value){
         if(value == -1) return null;
         if(graph.containsKey(value)) return graph.get(value);

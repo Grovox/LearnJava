@@ -1,4 +1,4 @@
-package Graph.DeepTraversalWithStack;
+package Graph;
 
 import Graph.Structure.Edge;
 import Graph.Structure.Node;
@@ -8,9 +8,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Stack;
 
-import static Graph.Generation.Main.addOrGetNode;
+import static Graph.Generation.addOrGetNode;
 
-public class Main {
+public class DeepTraversalWithStack {
     static void DNF(Node node, HashSet<Node> passed){
         System.out.println(node.value);
 

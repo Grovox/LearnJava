@@ -1,13 +1,13 @@
-package Graph.FindingPath;
+package Graph;
 
 import Graph.Structure.Edge;
 import Graph.Structure.Node;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static Graph.Generation.Main.addOrGetNode;
+import static Graph.Generation.addOrGetNode;
 
-public class Main {
+public class FindingPath {
     static boolean getPath(Node start, Node end, HashSet<Node> passed, LinkedList<Node> path){
         if(start == end) {
             path.addFirst(start);

@@ -1,4 +1,4 @@
-package Graph.DeepTraversalWithRecursion;
+package Graph;
 
 import Graph.Structure.Edge;
 import Graph.Structure.Node;
@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-import static Graph.Generation.Main.addOrGetNode;
+import static Graph.Generation.addOrGetNode;
 
-public class Main {
+public class DeepTraversalWithRecursion {
     static void DNF(Node node, HashSet<Node> passed){
         System.out.println(node.value);
 
