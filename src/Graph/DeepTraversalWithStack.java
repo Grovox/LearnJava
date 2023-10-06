@@ -77,7 +77,7 @@ public class DeepTraversalWithStack {
             adjacentNode.parents.put(node, edge);
         }
 
-        //перебор в глубину через рекурсию
+        //перебор в глубину через стек
         DFSWrap(graph, 7);
     }
 }
